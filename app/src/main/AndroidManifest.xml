@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ebooklearning">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EBookLearning">
+        <activity
+            android:name=".Activity_screen"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_tennboo"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_nineeboo"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_tenbo"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_ninebo"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_tenb"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_nineb"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_standard3"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_standard2"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Eightb"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Standard"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Medium"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

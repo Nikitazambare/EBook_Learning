@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Standard">
+
+    <ImageButton
+        android:id="@+id/Eight"
+        android:layout_width="249dp"
+        android:layout_height="161dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/eigh" />
+
+    <ImageButton
+        android:id="@+id/Nine"
+        android:layout_width="217dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="72dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Eight"
+        app:srcCompat="@drawable/nin" />
+
+    <ImageButton
+        android:id="@+id/Ten"
+        android:layout_width="192dp"
+        android:layout_height="132dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nine"
+        app:layout_constraintVertical_bias="0.612"
+        app:srcCompat="@drawable/tn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
