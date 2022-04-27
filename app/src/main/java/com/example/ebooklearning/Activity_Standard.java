@@ -34,8 +34,8 @@ public class Activity_Standard extends AppCompatActivity {
         Nine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activity_Standard.this , Activity_nineb.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(Activity_Standard.this , Activity_nineb.class);
+                startActivity(intent1);
             }
         });
 
