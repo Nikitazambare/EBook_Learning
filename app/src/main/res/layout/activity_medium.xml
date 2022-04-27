@@ -6,34 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".Activity_Medium">
 
-    <Button
-        android:id="@+id/English_Medium"
-        android:layout_width="365dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="124dp"
-        android:text="ENGLISH MEDIUM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/Marathi_Medium"
-        android:layout_width="365dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="68dp"
-        android:text="MARATHI MEDIUM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/English_Medium" />
-
-    <Button
-        android:id="@+id/Hindi_Medium"
-        android:layout_width="365dp"
-        android:layout_height="80dp"
-        android:text="HINDI MEDIUM"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Marathi_Medium"
-        app:layout_constraintVertical_bias="0.236" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select the Medium"
+            android:textStyle="bold"
+            android:textColor="#1e1e1e"
+            android:padding="12dp"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/English_Medium"
+            android:layout_width="365dp"
+            android:layout_height="80dp"
+            android:text="ENGLISH MEDIUM"
+            android:layout_marginTop="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Marathi_Medium"
+            android:layout_width="365dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="70dp"
+            android:text="MARATHI MEDIUM"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/English_Medium" />
+
+        <Button
+            android:id="@+id/Hindi_Medium"
+            android:layout_width="365dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="70dp"
+            android:text="HINDI MEDIUM"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Marathi_Medium"
+            app:layout_constraintVertical_bias="0.236" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
