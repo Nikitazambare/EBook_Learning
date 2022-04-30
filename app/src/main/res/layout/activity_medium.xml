@@ -1,62 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity_Medium">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/textt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select the Medium"
             android:textStyle="bold"
             android:textColor="#1e1e1e"
+            android:layout_marginBottom="55dp"
             android:padding="12dp"
             android:textSize="30sp"/>
 
-        <Button
-            android:id="@+id/English_Medium"
-            android:layout_width="365dp"
-            android:layout_height="80dp"
-            android:text="ENGLISH MEDIUM"
-            android:layout_marginTop="70dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <RelativeLayout
+            android:id="@+id/eng"
+            android:layout_width="200dp"
+            android:layout_below="@+id/textt"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:background="#CECECE">
 
-        <Button
-            android:id="@+id/Marathi_Medium"
-            android:layout_width="365dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="70dp"
-            android:text="MARATHI MEDIUM"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/English_Medium" />
+            <ImageView
+                android:id="@+id/engIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/english_medium"
+                app:tint="#575757" />
 
-        <Button
-            android:id="@+id/Hindi_Medium"
-            android:layout_width="365dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="70dp"
-            android:text="HINDI MEDIUM"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Marathi_Medium"
-            app:layout_constraintVertical_bias="0.236" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English Medium"
+                android:layout_below="@id/engIcon"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
-    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/English_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/textt"
+            android:layout_toRightOf="@+id/eng"
+            android:background="#CECECE">
+
+            <ImageView
+                android:id="@+id/marIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/marathi_medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marathi Medium"
+                android:layout_below="@id/marIcon"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+
+            <Button
+                android:id="@+id/Marathi_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hin"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/eng"
+            android:background="#CECECE">
+
+            <ImageView
+                android:id="@+id/hinIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/hindi_medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hindi Medium"
+                android:layout_below="@id/hinIcon"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+
+            <Button
+                android:id="@+id/Hindi_Medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

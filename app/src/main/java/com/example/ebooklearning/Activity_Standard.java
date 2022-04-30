@@ -5,13 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Activity_Standard extends AppCompatActivity {
 
-    ImageButton Eight;
-    ImageButton Nine;
-    ImageButton Ten;
+   Button Eight, Nine, Ten;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

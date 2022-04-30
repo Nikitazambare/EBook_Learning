@@ -1,43 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Standard">
+    tools:context=".Activity_Standard"
+    android:background="#dae2eb">
 
-    <ImageButton
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:text="Select Standard"
+            android:textSize="45sp"
+            android:textColor="#033b69"/>
+
+    <Button
         android:id="@+id/Eight"
-        android:layout_width="249dp"
-        android:layout_height="161dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:layout_marginHorizontal="25dp"
+        android:text="VIII"
+        app:backgroundTint="#394c5c"
+        android:textColor="#ECECEC"
+        app:cornerRadius="12dp"
+        android:textSize="150sp"
+        android:textStyle="bold|italic"
         android:contentDescription="@string/app_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/eigh" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/Nine"
-        android:layout_width="217dp"
-        android:layout_height="159dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
+        android:layout_marginHorizontal="25dp"
         android:contentDescription="@string/app_name"
+        app:cornerRadius="12dp"
+        android:text="IX"
+        app:backgroundTint="#394c5c"
+        android:textColor="#ECECEC"
+        android:textSize="150sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Eight"
         app:srcCompat="@drawable/nin" />
 
-    <ImageButton
+    <Button
         android:id="@+id/Ten"
-        android:layout_width="192dp"
-        android:layout_height="132dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="72dp"
+        android:layout_marginHorizontal="25dp"
         android:contentDescription="@string/app_name"
+        app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:text="X"
+        app:backgroundTint="#394c5c"
+        android:textColor="#ECECEC"
+        android:textSize="150sp"
+        android:textStyle="bold|italic"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nine"
         app:layout_constraintVertical_bias="0.612"
         app:srcCompat="@drawable/tn" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</ScrollView>

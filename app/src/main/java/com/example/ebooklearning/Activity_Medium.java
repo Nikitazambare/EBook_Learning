@@ -9,9 +9,7 @@ import android.widget.Button;
 
 public class Activity_Medium extends AppCompatActivity {
 
-    Button English_Medium;
-    Button Hindi_Medium;
-    Button Marathi_Medium;
+    Button English_Medium, Hindi_Medium, Marathi_Medium;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

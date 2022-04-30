@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EBook Learning</string>
+    <string name="login_redirect">Already have an account? <b>Login</b></string>
+    <string name="signup_redirect">Dont have an account? <b>Signup</b></string>
 </resources>

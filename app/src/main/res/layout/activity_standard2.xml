@@ -1,34 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_standard2">
+    tools:context=".Activity_Standard"
+    android:background="#dae2eb">
 
-    <ImageButton
-        android:id="@+id/nine"
-        android:layout_width="231dp"
-        android:layout_height="182dp"
-        android:layout_marginTop="144dp"
-        android:contentDescription="@string/app_name"
-        app:layout_constraintBottom_toTopOf="@+id/ten"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/nin" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <ImageButton
-        android:id="@+id/ten"
-        android:layout_width="204dp"
-        android:layout_height="189dp"
-        android:layout_marginBottom="120dp"
-        android:contentDescription="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/tn" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            app:cornerRadius="12dp"
+            android:text="Select Standard"
+            android:textSize="45sp"
+            android:textColor="#033b69"/>
+
+        <Button
+            android:id="@+id/eight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:cornerRadius="12dp"
+            android:layout_marginHorizontal="25dp"
+            android:text="VIII"
+            app:backgroundTint="#394c5c"
+            android:textColor="#ECECEC"
+            android:textSize="150sp"
+            android:textStyle="bold|italic"
+            android:contentDescription="@string/app_name" />
+
+        <Button
+            android:id="@+id/nine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            app:cornerRadius="12dp"
+            android:layout_marginHorizontal="25dp"
+            android:contentDescription="@string/app_name"
+            android:text="IX"
+            app:backgroundTint="#394c5c"
+            android:textColor="#ECECEC"
+            android:textSize="150sp"
+            android:textStyle="bold|italic"
+            app:srcCompat="@drawable/nin" />
+
+        <Button
+            android:id="@+id/ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="72dp"
+            android:layout_marginHorizontal="25dp"
+            android:contentDescription="@string/app_name"
+            android:text="X"
+            app:backgroundTint="#394c5c"
+            android:textColor="#ECECEC"
+            android:textSize="150sp"
+            android:textStyle="bold|italic"
+            app:srcCompat="@drawable/tn" />
+
+
+    </LinearLayout>
+</ScrollView>

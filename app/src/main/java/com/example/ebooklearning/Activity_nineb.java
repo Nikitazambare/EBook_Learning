@@ -2,6 +2,7 @@ package com.example.ebooklearning;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
@@ -28,8 +29,10 @@ public class Activity_nineb extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
                 Toast.makeText(Activity_nineb.this, "Clicked" +  books[position], Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Activity_nineb.this, PdfViewer.class);
+                intent.putExtra("subName", books[position]);
+                startActivity(intent);
             }
         });
 
