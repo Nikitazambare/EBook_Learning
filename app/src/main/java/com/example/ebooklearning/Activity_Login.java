@@ -50,52 +50,42 @@ public class Activity_Login extends AppCompatActivity {
         });
 
 
-//Turn On after testing
-//        Login.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String userEnteredUsername = User.getText().toString();
-//                String userEnteredPassword = Pass.getText().toString();
-//
-//                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Students");
-//                Query checkUser = reference.orderByChild("User").equalTo(userEnteredUsername);
-//                checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                        if(snapshot.exists()) {
-//                            String passwordFromDb = snapshot.child(userEnteredUsername).child("Password").getValue(String.class);
-//                            if(passwordFromDb.equals(userEnteredPassword)) {
-//                                Intent intent = new Intent( Activity_Login.this , Activity_Medium.class);
-//                                startActivity(intent);
-//                            }
-//                            else {
-//                                User.setError("Wrong Password");
-//                                User.requestFocus();
-//                            }
-//                        }
-//                        else {
-//                            User.setError("NO such User exist");
-//                            User.requestFocus();
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                    }
-//                });
-//
-//            }
-//
-//        });
-
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activity_Login.this, Activity_Medium.class);
-                startActivity(intent);
+                String userEnteredUsername = User.getText().toString();
+                String userEnteredPassword = Pass.getText().toString();
+
+                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Students");
+                Query checkUser = reference.orderByChild("User").equalTo(userEnteredUsername);
+                checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.exists()) {
+                            String passwordFromDb = snapshot.child(userEnteredUsername).child("Password").getValue(String.class);
+                            if(passwordFromDb.equals(userEnteredPassword)) {
+                                Intent intent = new Intent( Activity_Login.this , Activity_Medium.class);
+                                startActivity(intent);
+                            }
+                            else {
+                                User.setError("Wrong Password");
+                                User.requestFocus();
+                            }
+                        }
+                        else {
+                            User.setError("NO such User exist");
+                            User.requestFocus();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
 
             }
+
         });
 
 
