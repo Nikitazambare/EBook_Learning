@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ public class Activity_Login extends AppCompatActivity {
     TextInputEditText User, Pass;
     TextView loginRedirect;
     Button Login;
+    ImageView skip;
     DBHelper DB;
     FirebaseAuth auth;
     @Override
@@ -37,6 +39,7 @@ public class Activity_Login extends AppCompatActivity {
         User = findViewById(R.id.userNameLogin);
         Pass = findViewById(R.id.passwordLogin);
         Login = findViewById(R.id.Loginbutton);
+        skip = findViewById(R.id.skip);
         DB = new DBHelper( this);
         auth = FirebaseAuth.getInstance();
         loginRedirect = findViewById(R.id.signup_text);
@@ -45,6 +48,14 @@ public class Activity_Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Activity_Login.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( Activity_Login.this , Activity_Medium.class);
                 startActivity(intent);
             }
         });
@@ -62,6 +73,7 @@ public class Activity_Login extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if(snapshot.exists()) {
+                            Toast.makeText(Activity_Login.this, "User Found", Toast.LENGTH_SHORT).show();
                             String passwordFromDb = snapshot.child(userEnteredUsername).child("Password").getValue(String.class);
                             if(passwordFromDb.equals(userEnteredPassword)) {
                                 Intent intent = new Intent( Activity_Login.this , Activity_Medium.class);
@@ -80,7 +92,7 @@ public class Activity_Login extends AppCompatActivity {
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-
+                        Toast.makeText(Activity_Login.this, error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
